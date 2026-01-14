@@ -47,8 +47,7 @@ button {
 
 .hero-image {
   min-height: 100vh;
-  background: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80")
-    center/cover no-repeat;
+  background: url("hero.png") center/cover no-repeat;
   position: relative;
 }
 
@@ -66,8 +65,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 18px;
-  padding: 100px 24px 80px;
+  gap: 14px;
+  padding: 90px 24px 70px;
   text-align: center;
 }
 
@@ -154,16 +153,16 @@ button {
 }
 
 .stages {
-  padding: 48px 24px 80px;
+  padding: 36px 24px 64px;
   text-align: center;
 }
 
 .stages .divider-short {
-  margin: 0 auto 16px;
+  margin: 0 auto 8px;
 }
 
 .stages .section-title {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .stage-grid {
@@ -464,6 +463,13 @@ button {
   .filters {
     width: 100%;
     justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+  }
+
+  .filter button {
+    min-width: 120px;
   }
 
   .stage-grid {
