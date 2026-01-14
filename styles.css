@@ -31,6 +31,15 @@ button {
   position: absolute;
   top: 24px;
   left: 24px;
+  opacity: 0.9;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
   font-weight: 700;
   font-size: 22px;
   opacity: 0.9;
@@ -43,6 +52,7 @@ button {
 
 .hero-image {
   min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80")
   background: url("https://i.ibb.co/H0sxjY0/image.png")
     center/cover no-repeat;
   position: relative;
@@ -61,6 +71,9 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  padding: 100px 24px 80px;
   justify-content: center;
   gap: 18px;
   padding: 120px 24px 80px;
@@ -124,6 +137,7 @@ button {
   color: #fff;
   font-weight: 600;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  min-height: 42px;
 }
 
 .divider-short {
@@ -150,6 +164,15 @@ button {
 
 .stages {
   padding: 48px 24px 80px;
+  text-align: center;
+}
+
+.stages .divider-short {
+  margin: 0 auto 16px;
+}
+
+.stages .section-title {
+  margin-bottom: 28px;
 }
 
 .stage-grid {
@@ -278,17 +301,20 @@ button {
 .search-row {
   display: flex;
   gap: 12px;
+  flex-wrap: nowrap;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .search-row input {
   flex: 1;
+  min-width: 0;
   min-width: 200px;
   padding: 10px 14px;
   border-radius: 10px;
   border: none;
   background: rgba(255, 255, 255, 0.6);
+  min-height: 42px;
 }
 
 .search-note {
@@ -457,6 +483,8 @@ button {
     justify-content: flex-start;
   }
 
+  .stage-grid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
   .search-row {
     flex-direction: column;
     align-items: stretch;
