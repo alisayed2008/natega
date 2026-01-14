@@ -244,6 +244,7 @@ const setupInquiryPage = () => {
   pageState.grade = page.dataset.grade;
   setupFilters();
   setupShare(".share-result");
+  setupShare(".share-inline");
   setupBackToTop();
   setupCopy();
   document.querySelector("#searchButton").addEventListener("click", handleSearch);
