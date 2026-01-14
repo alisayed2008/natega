@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>استعلام الصف الثالث الإعدادي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="inquiry-page" data-grade="الصف الثالث الإعدادي">
+    <header class="inquiry-header">
+      <div class="logo">
+        <img src="logo.svg" alt="شعار الموقع" />
+      </div>
+      <div class="filters">
+        <div class="filter" data-filter="term">
+          <button type="button">الترم الأول</button>
+          <div class="filter-options">
+            <button type="button" data-value="الترم الأول">الترم الأول</button>
+            <button type="button" data-value="الترم الثاني">الترم الثاني</button>
+          </div>
+        </div>
+        <div class="filter" data-filter="method">
+          <button type="button">رقم الجلوس</button>
+          <div class="filter-options">
+            <button type="button" data-value="رقم الجلوس">رقم الجلوس</button>
+            <button type="button" data-value="الرقم القومي">الرقم القومي</button>
+          </div>
+        </div>
+        <div class="filter" data-filter="grade">
+          <button type="button">الصف الثالث الإعدادي</button>
+          <div class="filter-options">
+            <button type="button" data-value="الصف الأول الثانوي">الصف الأول الثانوي</button>
+            <button type="button" data-value="الصف الثاني الثانوي">الصف الثاني الثانوي</button>
+            <button type="button" data-value="الصف الثالث الثانوي">الصف الثالث الثانوي</button>
+            <button type="button" data-value="الصف الثالث الإعدادي">الصف الثالث الإعدادي</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-row">
+      <input id="queryInput" type="text" placeholder="اكتب هنا رقم الجلوس هنا" />
+      <button class="primary-button" id="searchButton" type="button">استعلم</button>
+    </div>
+    <p class="search-note">اكتب رقم الجلوس بشكل صحيح بلا مسافات ,باللغة العربية</p>
+
+    <div class="section-divider"></div>
+
+    <div class="results-header">
+      <h2 class="results-title">جدول <span>النتائج</span></h2>
+      <button class="share-result" type="button" disabled>
+        مشاركة
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 3 4Zm-12 8a3 3 0 1 0 2.83 4H9a3 3 0 0 0-3-4Zm12 0a3 3 0 1 0 2.83 4H21a3 3 0 0 0-3-4ZM8 14l8-4m-8 0 8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <section class="results hidden">
+      <div class="table">
+        <div class="table-header">
+          <div>المادة</div>
+          <div>العظمى</div>
+          <div>الصغرى</div>
+          <div>الدرجة</div>
+        </div>
+        <div class="table-body"></div>
+      </div>
+
+      <div class="summary">
+        <div>
+          <div class="summary-total">الدرجة الكلية: --</div>
+          <div class="summary-percent">النسبة المئوية: --</div>
+        </div>
+        <div class="summary-divider"></div>
+        <button class="copy-button" type="button">
+          <span>نسخ نص المجموع الكلي</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 9h9v12H9z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <div class="error-box hidden">
+      <h3>خطأ!</h3>
+      <p>
+من الممكن ان يكون سبب الخطأ
+خطأ كتابي وإملائي في الإستعلام , يرجى التأكد منه
+او عدم توافر النتيجة في النظام او ان خيارات التيرم او طريقة الأستعلام مختلفة
+او ان هناك عطل ما في التطبيق حاليا او ان النتيجة لم تظهر بعد
+      </p>
+      <strong>
+خطأ كتابي وإملائي في الإستعلام , يرجى التأكد منه
+او عدم توافر النتيجة في النظام او ان خيارات التيرم او طريقة الأستعلام مختلفة
+او ان هناك عطل ما في التطبيق حاليا او ان النتيجة لم تظهر بعد
+
+يرجى المحاولة مرة اخرى بعد قليل
+      </strong>
+    </div>
+
+    <button class="back-top" type="button">رجوع للأعلى ↜</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
