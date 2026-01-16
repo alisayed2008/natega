@@ -48,7 +48,7 @@ button {
 
 .hero-image {
   min-height: 100vh;
-  background: #2d0b47 url("hero.svg") center/cover no-repeat;
+  background: url("hero.svg") center/cover no-repeat;
   position: relative;
   z-index: 1;
 }
@@ -108,7 +108,7 @@ button {
 
 .hero-actions {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -334,11 +334,11 @@ button {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
-.results-title {
+results-title {
   font-size: 22px;
   margin: 0;
 }
@@ -460,33 +460,21 @@ button {
 }
 
 @media (max-width: 768px) {
-  .inquiry-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 0;
-    gap: 10px;
-  }
-
-  .inquiry-page .logo {
-    display: none;
+  .logo {
+    left: 16px;
+    top: 18px;
   }
 
   .filters {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: nowrap;
-    gap: 6px;
-  }
-
-  .filter {
-    flex: 1;
+    overflow-x: auto;
+    gap: 8px;
   }
 
   .filter button {
-    width: 100%;
-    min-width: 0;
-    padding: 8px 10px;
-    font-size: 12px;
+    min-width: 120px;
   }
 
   .stage-grid {
@@ -499,9 +487,7 @@ button {
   }
 
   .results-header {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
