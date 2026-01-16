@@ -48,7 +48,7 @@ button {
 
 .hero-image {
   min-height: 100vh;
-  background: #2d0b47 url("hero.svg") center/cover no-repeat;
+  background: #2d0b47 url("hero.png") center/cover no-repeat;
   position: relative;
   z-index: 1;
 }
