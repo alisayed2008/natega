@@ -48,7 +48,7 @@ button {
 
 .hero-image {
   min-height: 100vh;
-  background: url("hero.svg") center/cover no-repeat;
+  background: #2d0b47 url("hero.svg") center/cover no-repeat;
   position: relative;
   z-index: 1;
 }
@@ -108,7 +108,7 @@ button {
 
 .hero-actions {
   display: flex;
-  gap: 16px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -231,8 +231,12 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 28px;
-  padding-left: 70px;
+  margin-bottom: 20px;
+  padding-left: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  overflow: visible;
 }
 
 .inquiry-title {
@@ -245,14 +249,17 @@ button {
   gap: 12px;
   flex-wrap: nowrap;
   align-items: center;
+  width: 100%;
 }
 
 .filter {
   position: relative;
+  flex: 1;
 }
 
 .filter button {
-  min-width: 130px;
+  width: 100%;
+  min-width: 0;
   min-height: 40px;
   background: var(--glass);
   border: 1px solid var(--glass-stroke);
@@ -264,7 +271,7 @@ button {
 
 .filter-options {
   position: absolute;
-  top: 46px;
+  top: calc(100% + 8px);
   right: 0;
   display: none;
   background: transparent;
@@ -273,7 +280,7 @@ button {
   padding: 0;
   width: 180px;
   backdrop-filter: none;
-  z-index: 5;
+  z-index: 10;
 }
 
 .filter-options button {
@@ -334,11 +341,11 @@ button {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 12px;
 }
 
-results-title {
+.results-title {
   font-size: 22px;
   margin: 0;
 }
@@ -460,21 +467,22 @@ results-title {
 }
 
 @media (max-width: 768px) {
-  .logo {
-    left: 16px;
-    top: 18px;
+  .inquiry-page .logo {
+    position: static;
+    margin-bottom: 6px;
+    display: block;
   }
 
   .filters {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 8px;
+    gap: 6px;
   }
 
   .filter button {
-    min-width: 120px;
+    padding: 8px 10px;
+    font-size: 12px;
   }
 
   .stage-grid {
@@ -487,7 +495,9 @@ results-title {
   }
 
   .results-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 }
